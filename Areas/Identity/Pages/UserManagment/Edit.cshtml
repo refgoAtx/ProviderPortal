@@ -1,0 +1,60 @@
+﻿@page
+@model Provider.Areas.Identity.Pages.UserManagment.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Members</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Members.Id" />
+            <div class="form-group">
+                <label asp-for="Members.firstname" class="control-label"></label>
+                <input asp-for="Members.firstname" class="form-control" />
+                <span asp-validation-for="Members.firstname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Members.lastname" class="control-label"></label>
+                <input asp-for="Members.lastname" class="form-control" />
+                <span asp-validation-for="Members.lastname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Members.email" class="control-label"></label>
+                <input asp-for="Members.email" class="form-control" />
+                <span asp-validation-for="Members.email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Members.Password" class="control-label"></label>
+                <input asp-for="Members.Password" class="form-control" />
+                <span asp-validation-for="Members.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Members.ConfirmPassword" class="control-label"></label>
+                <input asp-for="Members.ConfirmPassword" class="form-control" />
+                <span asp-validation-for="Members.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Members.RoleID" class="control-label"></label>
+                <input asp-for="Members.RoleID" class="form-control" />
+                <span asp-validation-for="Members.RoleID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

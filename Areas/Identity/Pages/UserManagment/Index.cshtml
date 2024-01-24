@@ -1,0 +1,66 @@
+﻿@page
+@model Provider.Areas.Identity.Pages.UserManagment.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Members[0].firstname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Members[0].lastname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Members[0].email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Members[0].Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Members[0].ConfirmPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Members[0].RoleID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Members) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConfirmPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoleID)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

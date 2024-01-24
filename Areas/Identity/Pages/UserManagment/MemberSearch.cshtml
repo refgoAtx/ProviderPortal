@@ -1,0 +1,153 @@
+﻿@page
+@model Provider.Areas.Identity.Pages.UserManagment.MemberSearchModel
+@{
+}
+
+@{
+	ViewData["Title"] = "Create";
+	Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<!--begin::Content-->
+<div id="kt_app_content" class="app-content flex-column-fluid">
+	<!--begin::Content container-->
+	<div class="col-xxl-4">
+		<!--begin::Engage Widget 1-->
+		<div class="card card-xxl-stretch">
+			<!--begin::Card body-->
+			<div class="card-body d-flex flex-column justify-content-between h-100">
+				<!--begin::Page title-->
+				<div class="page-title d-flex flex-column align-items-start justify-content-center flex-wrap me-lg-2 pb-2 pb-lg-0" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', lg: '#kt_header_container'}">
+					<!--begin::Heading-->
+					<h1 class="text-dark fw-bolder my-1 fs-2">
+						Welcome to Jet
+						<small class="text-muted fs-6 fw-normal ms-1"></small>
+					</h1>
+					<!--end::Heading-->
+					<!--begin::Breadcrumb-->
+					<ul class="breadcrumb fw-bold fs-base my-1">
+						<li class="breadcrumb-item text-muted">
+							<a href="index.html" class="text-muted">Home</a>
+						</li>
+						<li class="breadcrumb-item text-dark">Member Search</li>
+					</ul>
+					<!--end::Breadcrumb-->
+				</div>
+				<!--end::Page title=-->
+				<!--begin::Section-->
+				<div class="pt-12">
+					<div class="col-md-12 pe-lg-10">
+						<!--begin::Form-->
+						<form action="" class="form mb-15 fv-plugins-bootstrap5 fv-plugins-framework"
+							  method="post" id="kt_contact_form">
+							<h1 class="fw-bold text-dark mb-9">Search Members</h1>
+
+							<!--begin::Input group-->
+							<div class="d-flex flex-column mb-10 fv-row fv-plugins-icon-container">
+								<label class="fs-6 fw-semibold mb-2">Member ID</label>
+								<input class="form-control form-control-solid" rows="6" name="message" placeholder=""></input>
+								<div class="fv-plugins-message-container invalid-feedback"></div>
+							</div>
+							<!--end::Input group-->
+							<!--begin::Input group-->
+							<div class="d-flex flex-column mb-5 fv-row">
+								<!--begin::Label-->
+								<h1 class="fs-5 fw-semibold mb-2 text-center" style="font-size:xx-large">OR</h1>
+								@*<!--end::Label-->
+								<!--begin::Input-->
+								<input class="form-control form-control-solid" placeholder="" name="subject">
+								<!--end::Input-->*@
+							</div>
+							<!--end::Input group-->
+							<!--begin::Input group-->
+							<div class="row mb-5">
+								<!--begin::Col-->
+								<div class="col-md-6 fv-row fv-plugins-icon-container">
+									<!--begin::Label-->
+									<label class="fs-5 fw-semibold mb-2">First Name</label>
+									<!--end::Label-->
+									<!--begin::Input-->
+									<input type="text" class="form-control form-control-solid" placeholder="" name="name">
+									<!--end::Input-->
+									<div class="fv-plugins-message-container invalid-feedback"></div>
+								</div>
+								<!--end::Col-->
+								<!--begin::Col-->
+								<div class="col-md-6 fv-row fv-plugins-icon-container">
+									<!--end::Label-->
+									<label class="fs-5 fw-semibold mb-2">Last Name</label>
+									<!--end::Label-->
+									<!--end::Input-->
+									<input type="text" class="form-control form-control-solid" placeholder="" name="email">
+									<!--end::Input-->
+									<div class="fv-plugins-message-container invalid-feedback"></div>
+								</div>
+								<!--end::Col-->
+							</div>
+							<div class="row mb-5">
+								<!--begin::Col-->
+								<div class="col-md-6 fv-row fv-plugins-icon-container">
+									<!--begin::Label-->
+									<label class="fs-5 fw-semibold mb-2">Date of Birth</label>
+									<!--end::Label-->
+									<!--begin::Input-->
+									<input type="datetime" class="form-control form-control-solid" placeholder="" name="name">
+									<!--end::Input-->
+									<div class="fv-plugins-message-container invalid-feedback"></div>
+								</div>
+								<!--end::Col-->
+								<!--begin::Col-->
+								<div class="col-md-6 fv-row fv-plugins-icon-container">
+									<!--end::Label-->
+									<label class="fs-5 fw-semibold mb-2">Service Date</label>
+									<!--end::Label-->
+									<!--end::Input-->
+									<input type="datetime" class="form-control form-control-solid" placeholder="" name="email">
+									<!--end::Input-->
+									<div class="fv-plugins-message-container invalid-feedback"></div>
+								</div>
+								<!--end::Col-->
+							</div>
+							<!--end::Input group-->
+							<!--begin::Submit-->
+							<button type="submit" class="btn btn-primary" id="kt_contact_submit_button">
+								<!--begin::Indicator label-->
+								<span class="indicator-label">Search Members</span>
+								<!--end::Indicator label-->
+								<!--begin::Indicator progress-->
+								<span class="indicator-progress">
+									Please wait...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+								</span>
+								<!--end::Indicator progress-->
+							</button>
+							<!--end::Submit-->
+						</form>
+						<!--end::Form-->
+					</div>
+				</div>
+				<!--end::Section-->
+
+			</div>
+			<!--end::Card body-->
+		</div>
+		<!--end::Engage Widget 1-->
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--end::Content container-->
+</div>
+<!--end::Content-->

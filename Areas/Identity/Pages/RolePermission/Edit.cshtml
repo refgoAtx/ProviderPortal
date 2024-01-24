@@ -1,0 +1,60 @@
+﻿@page
+@model Provider.Areas.Identity.Pages.RolePermission.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ProviderRolePermission</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ProviderRolePermission.Id" />
+            <div class="form-group">
+                <label asp-for="ProviderRolePermission.ResourseName" class="control-label"></label>
+                <input asp-for="ProviderRolePermission.ResourseName" class="form-control" />
+                <span asp-validation-for="ProviderRolePermission.ResourseName" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ProviderRolePermission.Create" /> @Html.DisplayNameFor(model => model.ProviderRolePermission.Create)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ProviderRolePermission.Read" /> @Html.DisplayNameFor(model => model.ProviderRolePermission.Read)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ProviderRolePermission.Update" /> @Html.DisplayNameFor(model => model.ProviderRolePermission.Update)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ProviderRolePermission.Delete" /> @Html.DisplayNameFor(model => model.ProviderRolePermission.Delete)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProviderRolePermission.RoleID" class="control-label"></label>
+                <input asp-for="ProviderRolePermission.RoleID" class="form-control" />
+                <span asp-validation-for="ProviderRolePermission.RoleID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
